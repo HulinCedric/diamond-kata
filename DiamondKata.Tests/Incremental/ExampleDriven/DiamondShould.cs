@@ -1,6 +1,6 @@
 using Xunit;
 
-namespace DiamondKata.Tests.Incremental;
+namespace DiamondKata.Tests.Incremental.ExampleDriven;
 
 /// <summary>
 ///     <para>These test cases can be used to test-drive a solution to the diamond kata, in an incremental manner.</para>
