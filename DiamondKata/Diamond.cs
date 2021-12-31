@@ -8,13 +8,18 @@ public abstract class Diamond
 
     public static string Print(char suppliedLetter)
     {
-        var printResult = new StringBuilder($"{StartingLetter}");
+        if (suppliedLetter == StartingLetter)
+            return $"{StartingLetter}";
 
-        for (var nextLetter = GetNextLetter(StartingLetter); 
-             nextLetter <= suppliedLetter; 
+        var printResult = new StringBuilder($"{StartingLetter}");
+        printResult.Append('\n');
+
+        for (var nextLetter = GetNextLetter(StartingLetter);
+             nextLetter <= suppliedLetter;
              nextLetter = GetNextLetter(nextLetter))
         {
             printResult.Append(string.Join(string.Empty, Enumerable.Repeat(nextLetter, 2)));
+            printResult.Append('\n');
         }
 
         return printResult.ToString();
