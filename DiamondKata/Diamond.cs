@@ -4,32 +4,44 @@ namespace DiamondKata;
 
 public abstract class Diamond
 {
-    private const char StartingLetter = 'A';
+    private const char LineSeparator = '\n';
+    private const char StartLetter = 'A';
+    private const char InterSpaceCharacter = ' ';
+    private const char IndentationCharacter = ' ';
 
     public static string Print(char suppliedLetter)
     {
-        if (suppliedLetter == StartingLetter)
-            return $"{StartingLetter}";
+        if (suppliedLetter == StartLetter)
+            return $"{StartLetter}";
 
-        var printResult = new StringBuilder();
-
-        for (var nextLetter = StartingLetter;
-             nextLetter <= suppliedLetter;
-             nextLetter = GetNextLetter(nextLetter))
-        {
-            printResult.Append(PrepareLine(suppliedLetter, nextLetter));
-            printResult.Append('\n');
-        }
-
-        return printResult.ToString();
+        return BuildDiamond(suppliedLetter);
     }
 
-    private static StringBuilder PrepareLine(char suppliedLetter, char currentLetter)
+    private static string BuildDiamond(char suppliedLetter)
+    {
+        var topHalfDiamondLines = GiveHalfDiamondLines(suppliedLetter).ToList();
+
+        var topHalfDiamond = string.Join(LineSeparator, topHalfDiamondLines);
+
+        topHalfDiamondLines.Reverse();
+        var bottomHalfDiamond = string.Join(LineSeparator, topHalfDiamondLines.Skip(1));
+
+        return topHalfDiamond + LineSeparator + bottomHalfDiamond;
+    }
+
+    private static IEnumerable<StringBuilder> GiveHalfDiamondLines(char suppliedLetter)
+    {
+        for (var nextLetter = StartLetter;
+             nextLetter <= suppliedLetter;
+             nextLetter = GetNextLetter(nextLetter))
+            yield return BuildLine(suppliedLetter, nextLetter);
+    }
+
+    private static StringBuilder BuildLine(char suppliedLetter, char currentLetter)
     {
         var lineResult = new StringBuilder();
 
         var indentation = GetIndentation(suppliedLetter, currentLetter);
-
         lineResult.Append(indentation);
 
         lineResult.Append(currentLetter);
@@ -37,7 +49,7 @@ public abstract class Diamond
         var interSpace = GetInterSpace(currentLetter);
         lineResult.Append(interSpace);
 
-        if (currentLetter != StartingLetter)
+        if (currentLetter != StartLetter)
             lineResult.Append(currentLetter);
 
         lineResult.Append(indentation);
@@ -47,20 +59,16 @@ public abstract class Diamond
 
     private static string GetInterSpace(char currentLetter)
     {
-        const char interSpaceCharacter = ' ';
+        var interSpaceCount = (currentLetter - StartLetter) * 2 - 1;
 
-        var interSpaceCharacterCount = (currentLetter - StartingLetter) * 2 - 1;
-
-        return RepeatCharacter(interSpaceCharacter, interSpaceCharacterCount);
+        return RepeatCharacter(InterSpaceCharacter, interSpaceCount);
     }
 
     private static string GetIndentation(char suppliedLetter, char currentLetter)
     {
-        const char indentationCharacter = ' ';
-
         var indentationCount = suppliedLetter - currentLetter;
 
-        return RepeatCharacter(indentationCharacter, indentationCount);
+        return RepeatCharacter(IndentationCharacter, indentationCount);
     }
 
     private static char GetNextLetter(char letter)

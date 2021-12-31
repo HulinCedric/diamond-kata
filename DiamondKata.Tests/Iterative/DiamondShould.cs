@@ -27,13 +27,6 @@ public class DiamondShould
         => Assert.Equal("A", Diamond.Print('A'));
 
     [Fact]
-    public void Separate_characters_with_inter_character_spaces_when_B_is_supplied()
-        => Assert.Equal(
-            " A \n" +
-            "B B\n",
-            Diamond.Print('B'));
-
-    [Fact(Skip = "1. Remove the 'Skip' property 2. Make it pass 3. Skip it again or delete it 4. Go to the next test")]
     public void Print_the_bottom_half_by_symmetry()
         => Assert.Equal(
             " A \n" +
