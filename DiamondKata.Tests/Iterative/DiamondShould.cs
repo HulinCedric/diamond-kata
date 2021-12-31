@@ -27,10 +27,6 @@ public class DiamondShould
         => Assert.Equal("A", Diamond.Print('A'));
 
     [Fact]
-    public void Give_character_sequence_when_B_is_supplied()
-        => Assert.Equal("AB", Diamond.Print('B'));
-
-    [Fact(Skip = "1. Remove the 'Skip' property 2. Make it pass 3. Skip it again or delete it 4. Go to the next test")]
     public void Repeat_characters_when_B_is_supplied()
         => Assert.Equal("ABB", Diamond.Print('B'));
 

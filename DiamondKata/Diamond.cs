@@ -1,4 +1,6 @@
-﻿namespace DiamondKata;
+﻿using System.Text;
+
+namespace DiamondKata;
 
 public abstract class Diamond
 {
@@ -6,11 +8,18 @@ public abstract class Diamond
 
     public static string Print(char suppliedLetter)
     {
-        var result = string.Empty;
+        var printResult = new StringBuilder($"{StartingLetter}");
 
-        for (var letter = StartingLetter; letter <= suppliedLetter; letter++)
-            result += letter;
+        for (var nextLetter = GetNextLetter(StartingLetter); 
+             nextLetter <= suppliedLetter; 
+             nextLetter = GetNextLetter(nextLetter))
+        {
+            printResult.Append(string.Join(string.Empty, Enumerable.Repeat(nextLetter, 2)));
+        }
 
-        return result;
+        return printResult.ToString();
     }
+
+    private static char GetNextLetter(char letter)
+        => (char)(letter + 1);
 }
