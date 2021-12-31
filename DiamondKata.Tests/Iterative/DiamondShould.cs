@@ -44,36 +44,36 @@ public class DiamondShould
     [Fact(Skip = "1. Make it pass 2. Skip it again or delete it and go to next test")]
     public void Indent_characters_when_B_is_supplied()
         => Assert.Equal(
-            " A\n" +
+            " A \n" +
             "BB\n",
             Diamond.Print('B'));
 
     [Fact(Skip = "1. Make it pass 2. Skip it again or delete it and go to next test")]
     public void Separate_characters_with_inter_character_spaces_when_B_is_supplied()
         => Assert.Equal(
-            " A\n" +
+            " A \n" +
             "B B\n",
             Diamond.Print('B'));
 
     [Fact(Skip = "1. Make it pass 2. Skip it again or delete it and go to next test")]
     public void Print_the_bottom_half_by_symmetry()
         => Assert.Equal(
-            " A\n" +
+            " A \n" +
             "B B\n" +
-            " A",
+            " A ",
             Diamond.Print('B'));
 
     [Fact(Skip = "1. Make it pass 2. Congrats, you have a working solution")]
     public void Print_with_supplied_letter_at_the_widest_point()
         => Assert.Equal(
-            "    A\n" +
-            "   B B\n" +
-            "  C   C\n" +
-            " D     D\n" +
+            "    A    \n" +
+            "   B B   \n" +
+            "  C   C  \n" +
+            " D     D \n" +
             "E       E\n" +
-            " D     D\n" +
-            "  C   C\n" +
-            "   B B\n" +
-            "    A",
+            " D     D \n" +
+            "  C   C  \n" +
+            "   B B   \n" +
+            "    A    ",
             Diamond.Print('E'));
 }
