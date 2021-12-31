@@ -10,23 +10,21 @@ public abstract class Diamond
     private const char IndentationCharacter = ' ';
 
     public static string Print(char suppliedLetter)
-    {
-        if (suppliedLetter == StartLetter)
-            return $"{StartLetter}";
+        => string.Join(LineSeparator, PrintLines(suppliedLetter));
 
-        return BuildDiamond(suppliedLetter);
-    }
-
-    private static string BuildDiamond(char suppliedLetter)
+    private static string[] PrintLines(char suppliedLetter)
     {
+        var diamondLines = new List<string>();
+
         var topHalfDiamondLines = GiveHalfDiamondLines(suppliedLetter).ToList();
 
-        var topHalfDiamond = string.Join(LineSeparator, topHalfDiamondLines);
+        diamondLines.AddRange(topHalfDiamondLines.Select(l => l.ToString()));
 
         topHalfDiamondLines.Reverse();
-        var bottomHalfDiamond = string.Join(LineSeparator, topHalfDiamondLines.Skip(1));
 
-        return topHalfDiamond + LineSeparator + bottomHalfDiamond;
+        diamondLines.AddRange(topHalfDiamondLines.Skip(1).Select(l => l.ToString()));
+
+        return diamondLines.ToArray();
     }
 
     private static IEnumerable<StringBuilder> GiveHalfDiamondLines(char suppliedLetter)

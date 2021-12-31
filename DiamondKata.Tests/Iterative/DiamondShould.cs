@@ -27,14 +27,6 @@ public class DiamondShould
         => Assert.Equal("A", Diamond.Print('A'));
 
     [Fact]
-    public void Print_the_bottom_half_by_symmetry()
-        => Assert.Equal(
-            " A \n" +
-            "B B\n" +
-            " A ",
-            Diamond.Print('B'));
-
-    [Fact(Skip = "1. Make it pass 2. Congrats, you have a working solution")]
     public void Print_with_supplied_letter_at_the_widest_point()
         => Assert.Equal(
             "    A    \n" +
