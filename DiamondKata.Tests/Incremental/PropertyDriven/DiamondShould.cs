@@ -31,7 +31,7 @@ public class DiamondShould
 
     /// Devil's Advocate example:
     /// <example>"    A "</example>
-    [Property(Skip = "1. Remove the 'Skip' property 2. Make it pass 3. Go to next test")]
+    [Property(Skip = "1. Remove the 'Skip' property 2. Make it pass 3. Go to the next test")]
     public Property Contains_A_in_first_line(char suppliedLetter)
     {
         var diamond = Diamond.Print(suppliedLetter);
@@ -43,7 +43,7 @@ public class DiamondShould
 
     /// Devil's Advocate example:
     /// <example>"    A "</example>
-    [Property(Skip = "1. Remove the 'Skip' property 2. Make it pass 3. Go to next test")]
+    [Property(Skip = "1. Remove the 'Skip' property 2. Make it pass 3. Go to the next test")]
     public Property Contains_A_in_last_line(char suppliedLetter)
     {
         var diamond = Diamond.Print(suppliedLetter);
@@ -55,7 +55,7 @@ public class DiamondShould
 
     /// Devil's Advocate example:
     /// <example>"    A    "</example>
-    [Property(Skip = "1. Remove the 'Skip' property 2. Make it pass 3. Go to next test")]
+    [Property(Skip = "1. Remove the 'Skip' property 2. Make it pass 3. Go to the next test")]
     public Property Have_a_vertically_symmetric_contour(char suppliedLetter)
     {
         var diamond = Diamond.Print(suppliedLetter);
@@ -78,7 +78,7 @@ public class DiamondShould
     ///     " B "
     ///     " A "
     /// </example>
-    [Property(Skip = "1. Remove the 'Skip' property 2. Make it pass 3. Go to next test")]
+    [Property(Skip = "1. Remove the 'Skip' property 2. Make it pass 3. Go to the next test")]
     public Property Contain_lines_with_correct_letter_in_correct_order(char suppliedLetter)
     {
         // Given
@@ -115,7 +115,7 @@ public class DiamondShould
     ///     "BBBBBBB"
     ///     "   A   "
     /// </example>
-    [Property(Skip = "1. Remove the 'Skip' property 2. Make it pass 3. Go to next test")]
+    [Property(Skip = "1. Remove the 'Skip' property 2. Make it pass 3. Go to the next test")]
     public Property Have_width_equals_to_the_height(char suppliedLetter)
     {
         // When
@@ -139,7 +139,7 @@ public class DiamondShould
     ///     "B     B"
     ///     "   A   "
     /// </example>
-    [Property(Skip = "1. Remove the 'Skip' property 2. Make it pass 3. Go to next test")]
+    [Property(Skip = "1. Remove the 'Skip' property 2. Make it pass 3. Go to the next test")]
     public Property Contain_lines_with_two_identical_letters_except_for_the_top_and_the_bottom(char suppliedLetter)
     {
         // When
@@ -165,7 +165,7 @@ public class DiamondShould
     ///     "  B B  "
     ///     "   A   "
     /// </example>
-    [Property(Skip = "1. Remove the 'Skip' property 2. Make it pass 3. Go to next test")]
+    [Property(Skip = "1. Remove the 'Skip' property 2. Make it pass 3. Go to the next test")]
     public Property Have_lower_left_space_as_a_triangle(char suppliedLetter)
     {
         var diamond = Diamond.Print(suppliedLetter);
@@ -199,7 +199,7 @@ public class DiamondShould
     ///     "  B B  "
     ///     "   A   "
     /// </example>
-    [Property(Skip = "1. Remove the 'Skip' property 2. Make it pass 3. Go to next test")]
+    [Property(Skip = "1. Remove the 'Skip' property 2. Make it pass 3. Go to the next test")]
     public Property Be_symmetric_around_horizontal_axis(char suppliedLetter)
     {
         var diamond = Diamond.Print(suppliedLetter);

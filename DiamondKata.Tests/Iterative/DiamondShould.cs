@@ -26,36 +26,36 @@ public class DiamondShould
     public void Print_smallest_one_with_only_A_character()
         => Assert.Equal("A", Diamond.Print('A'));
 
-    [Fact(Skip = "1. Make it pass 2. Skip it again or delete it and go to next test")]
+    [Fact(Skip = "1. Remove the 'Skip' property 2. Make it pass 3. Skip it again or delete it 4. Go to the next test")]
     public void Give_character_sequence_when_B_is_supplied()
         => Assert.Equal("AB", Diamond.Print('B'));
 
-    [Fact(Skip = "1. Make it pass 2. Skip it again or delete it and go to next test")]
+    [Fact(Skip = "1. Remove the 'Skip' property 2. Make it pass 3. Skip it again or delete it 4. Go to the next test")]
     public void Repeat_characters_when_B_is_supplied()
         => Assert.Equal("ABB", Diamond.Print('B'));
 
-    [Fact(Skip = "1. Make it pass 2. Skip it again or delete it and go to next test")]
+    [Fact(Skip = "1. Remove the 'Skip' property 2. Make it pass 3. Skip it again or delete it 4. Go to the next test")]
     public void Have_separate_lines_when_B_is_supplied()
         => Assert.Equal(
             "A\n" +
             "BB\n",
             Diamond.Print('B'));
 
-    [Fact(Skip = "1. Make it pass 2. Skip it again or delete it and go to next test")]
-    public void Indent_characters_when_B_is_supplied()
+    [Fact(Skip = "1. Remove the 'Skip' property 2. Make it pass 3. Skip it again or delete it 4. Go to the next test")]
+    public void Indent_characters_on_each_side_when_B_is_supplied()
         => Assert.Equal(
             " A \n" +
             "BB\n",
             Diamond.Print('B'));
 
-    [Fact(Skip = "1. Make it pass 2. Skip it again or delete it and go to next test")]
+    [Fact(Skip = "1. Remove the 'Skip' property 2. Make it pass 3. Skip it again or delete it 4. Go to the next test")]
     public void Separate_characters_with_inter_character_spaces_when_B_is_supplied()
         => Assert.Equal(
             " A \n" +
             "B B\n",
             Diamond.Print('B'));
 
-    [Fact(Skip = "1. Make it pass 2. Skip it again or delete it and go to next test")]
+    [Fact(Skip = "1. Remove the 'Skip' property 2. Make it pass 3. Skip it again or delete it 4. Go to the next test")]
     public void Print_the_bottom_half_by_symmetry()
         => Assert.Equal(
             " A \n" +
