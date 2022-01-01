@@ -16,18 +16,32 @@ C   C
   A
 ```
 
-## Approaches
+## Repository goals
 
-One goal of this repository is to illustrate and compile, with my understanding, different test-driven approaches on a
-well known exercise.
+### Coding
 
-Each approaches have it's respective test suite directory.
+One goal of this repository is to experiment with one or many approaches in the same exercise guided by tests.
 
-Also, each approaches have its respective branch containing solution.
+Because the exercise is the same, it is simpler to switch from one approach to others without the cognitive load of a
+new problem.
 
-### Example-Driven Development
+This let focusing on what is really important here, the approach.
 
-#### Iterative approach
+### Discovering
+
+The other goal of this repository is to illustrate and compile, with my understanding, different "test-driven
+development" approaches in a well-known exercise.
+
+Because the exercise is the same, it is simple to figure out what each approach provides.
+
+Of course, there are best suited approaches depending on the problem, but all are relevant depending on the constraints.
+There are no better approaches than another, it's context depending.
+
+Each approach has its respective test suite.
+
+Also, each approach has its respective branch containing a solution.
+
+## Iterative approach
 
 Seb Rose used an iterative approach, where he 'recycle' test cases.
 
