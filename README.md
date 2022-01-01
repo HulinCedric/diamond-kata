@@ -54,14 +54,21 @@ on our understanding.
 
 [Diamond recycling (and painting yourself into a corner)](http://claysnow.co.uk/diamond-recycling-and-painting-yourself-into-a-corner)
 
-#### Incremental approach
+## Incremental approach
 
 Incremental approach is more common and encourages thinking before coding.
+
+### Example-Driven Development
+
+#### Inside-out
+
+Inside-out approach is also known as the Detroit School of TDD, Classicist or black-box testing.
 
 The goal is to split the problem into smaller ones, verified by a set of tests that are universally true, so did not
 need to be recycled.
 
-With such an approach, we can incrementally find a solution. Author thinking draw the outline of the solution path.
+With such an approach, we can incrementally emerge out a solution. Author thinking draw the outline of the solution
+path.
 
 To illustrate one of the possible paths, the [Sandro Mancuso approach](https://github.com/sandromancuso/diamond_kata)
 inspired the Incremental suite tests of this repository.
