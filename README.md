@@ -78,3 +78,26 @@ There are a lot of other possible paths (maybe illustrate here later):
 - [George Dinwiddie approach](https://blog.gdinwiddie.com/2014/11/30/another-approach-to-the-diamond-kata)
 - [Ron Jeffries approach](https://ronjeffries.com/articles/tdd-diamond)
 - And many more... search "diamond kata" on the web ;)
+
+### Property-Driven Development
+
+In contrast to example-driven approach, property-driven idea is to validate an expected property of a system. It's a
+paint of the system behavior contour.
+
+Examples aren't necessary, a range of input will assert the property validity.
+
+With such an approach, we can incrementally constraints properties of the system under test, in order to reach the
+solution.
+
+To illustrate one of the possible paths, the [Mark Seemann approach](https://github.com/ploeh/DiamondFsCheck)
+inspired the property-driven suite tests of this repository.
+
+Mark Seemann use [Devil's Advocate](https://blog.ploeh.dk/2019/10/07/devils-advocate) to force him to write properties
+that completely describe the problem.
+
+[Diamond kata with FsCheck](https://blog.ploeh.dk/2015/01/10/diamond-kata-with-fscheck)
+
+There are a lot of other possible paths (maybe illustrate here later):
+
+- [Nat Pryce approach](http://natpryce.com/articles/000807.html)
+- And many more... search "diamond kata property-based testing" on the web ;)
