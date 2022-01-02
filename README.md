@@ -99,5 +99,5 @@ that completely describe the problem.
 
 There are a lot of other possible paths (maybe illustrate here later):
 
-- [Nat Pryce approach](http://natpryce.com/articles/000807.html)
+- [Nat Pryce approach](http://natpryce.com/articles/000807.html) and his [Thoughts on Incremental Development](http://natpryce.com/articles/000809.html)
 - And many more... search "diamond kata property-based testing" on the web ;)
