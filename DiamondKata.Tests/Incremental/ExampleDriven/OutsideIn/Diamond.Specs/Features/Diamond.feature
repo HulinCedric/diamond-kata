@@ -5,7 +5,7 @@ Print a diamond starting with 'A' with the supplied letter at the widest point.
 **Kata description**: [Recycling tests in TDD](http://claysnow.co.uk/recycling-tests-in-tdd)
 **Feature description**: [Diamond recycling (and painting yourself into a corner)](http://claysnow.co.uk/diamond-recycling-and-painting-yourself-into-a-corner)
 
-#    Scenario: Print diamond A
+#    Example: Print diamond A
 #        Given the letter 'A'
 #        When print a diamond
 #        Then diamond prints
@@ -13,7 +13,7 @@ Print a diamond starting with 'A' with the supplied letter at the widest point.
 #        A
 #        """
 
-#    Scenario: Print diamond B
+#    Example: Print diamond B
 #        Given the letter 'B'
 #        When print a diamond
 #        Then diamond prints
@@ -23,7 +23,7 @@ Print a diamond starting with 'A' with the supplied letter at the widest point.
 #         A 
 #        """
 
-    Scenario: Print diamond C
+    Example: Print diamond C
         Given the letter 'C'
         When print a diamond
         Then diamond prints
@@ -35,7 +35,7 @@ Print a diamond starting with 'A' with the supplied letter at the widest point.
           A  
         """
 
-#    Scenario: Print diamond D
+#    Example: Print diamond D
 #        Given the letter 'D'
 #        When print a diamond
 #        Then diamond prints
@@ -49,7 +49,7 @@ Print a diamond starting with 'A' with the supplied letter at the widest point.
 #           A   
 #        """
 
-#    Scenario: Print diamond E
+#    Example: Print diamond E
 #        Given the letter 'E'
 #        When print a diamond
 #        Then diamond prints
