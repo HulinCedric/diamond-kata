@@ -21,8 +21,9 @@ public abstract class Diamond
     {
         var orderedCharacters = letters.ToCharArray();
 
-        var replacedWithSeparatorExceptCharacter = orderedCharacters.Select(c=> c );
-        // var replacedWithSeparatorExceptCharacter = orderedCharacters.Select(c=> c == character ? character : ' ');
+        var replacedWithSeparatorExceptCharacter = orderedCharacters.Select(
+            c => c == character ?
+                     character : ' ');
 
         return string.Join("", replacedWithSeparatorExceptCharacter);
     }
