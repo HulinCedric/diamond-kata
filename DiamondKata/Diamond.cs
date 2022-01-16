@@ -5,12 +5,11 @@ public abstract class Diamond
     public static string Print(char suppliedLetter)
     {
         var reversedAlphabetCharacters = "CBA";
-        var upperLeftCorner = new List<string>
-        {
-            GenerateLeftCorner(reversedAlphabetCharacters, 'A'),
-            GenerateLeftCorner(reversedAlphabetCharacters, 'B'),
-            GenerateLeftCorner(reversedAlphabetCharacters, 'C')
-        };
+        var alphabeticallyOrderedCharacters = "ABC";
+
+        var upperLeftCorner = alphabeticallyOrderedCharacters
+            .Select(c => GenerateLeftCorner(reversedAlphabetCharacters, c))
+            .ToList();
         return string.Join(
             "\n",
             Mirror(upperLeftCorner)
