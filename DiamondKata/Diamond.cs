@@ -4,7 +4,7 @@ public abstract class Diamond
 {
     public static string Print(char suppliedLetter)
     {
-        var reversedAlphabetLetters = GetReversedAlphabetFrom('C');
+        var reversedAlphabetLetters = GetReversedAlphabetFrom(suppliedLetter);
 
         var upperLeftCorner = reversedAlphabetLetters
             .Reverse()
