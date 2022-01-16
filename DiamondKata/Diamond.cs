@@ -11,7 +11,15 @@ public abstract class Diamond
                 "C   C"));
 
     private static string MirrorLine(string line)
-        => line + "  ";
+    {
+        var characters = line.ToCharArray().Select(c => c.ToString());
+
+        var mirrorCharacters = characters;
+
+        var mirrorLine = string.Join("", mirrorCharacters) + "  ";
+
+        return mirrorLine;
+    }
 
     private static string[] Mirror(params string[] lines)
     {
