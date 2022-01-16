@@ -8,7 +8,7 @@ public abstract class Diamond
         {
             "  A",
             " B ",
-            GenerateLeftCorner("C  ")
+            GenerateLeftCorner('C')
         };
         return string.Join(
             "\n",
@@ -16,8 +16,8 @@ public abstract class Diamond
                 .Select(MirrorLine));
     }
 
-    private static string GenerateLeftCorner(string character)
-        => "C  ";
+    private static string GenerateLeftCorner(char character)
+        => character + "  ";
 
     private static string MirrorLine(string line)
     {
