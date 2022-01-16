@@ -9,8 +9,8 @@ public abstract class Diamond
                 new List<string>
                 {
                     MirrorLine("  A"),
-                    " B B ",
-                    "C   C"
+                    MirrorLine(" B "),
+                    MirrorLine("C  ")
                 }));
 
     private static string MirrorLine(string line)
