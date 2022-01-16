@@ -6,9 +6,12 @@ public abstract class Diamond
         => string.Join(
             "\n",
             Mirror(
-                MirrorLine("  A"),
-                " B B ",
-                "C   C"));
+                new List<string>
+                {
+                    MirrorLine("  A"),
+                    " B B ",
+                    "C   C"
+                }));
 
     private static string MirrorLine(string line)
     {
@@ -21,7 +24,7 @@ public abstract class Diamond
         return mirrorLine;
     }
 
-    private static string[] Mirror(params string[] lines)
+    private static List<string> Mirror(List<string> lines)
     {
         var firstLines = lines;
         var newLines = new List<string>(firstLines);
@@ -31,7 +34,7 @@ public abstract class Diamond
         reversedFirstLinesWithoutLastEntry.Reverse();
 
         newLines.AddRange(reversedFirstLinesWithoutLastEntry);
-        return newLines.ToArray();
+        return newLines.ToList();
     }
 
     private static IEnumerable<string> WithoutLastEntry(IEnumerable<string> firstLines)
