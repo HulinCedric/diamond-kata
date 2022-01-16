@@ -15,15 +15,14 @@ public abstract class Diamond
         var firstLines = lines;
         var newLines = new List<string>(firstLines);
 
-        var reversedFirstLines = new List<string>
-        {
-            "  A  ",
-            " B B "
-        };
+        var reversedFirstLinesWithoutLastEntry = WithoutLastEntry(firstLines).ToList();
 
-        reversedFirstLines.Reverse();
+        reversedFirstLinesWithoutLastEntry.Reverse();
 
-        newLines.AddRange(reversedFirstLines);
+        newLines.AddRange(reversedFirstLinesWithoutLastEntry);
         return newLines.ToArray();
     }
+
+    private static IEnumerable<string> WithoutLastEntry(IEnumerable<string> firstLines)
+        => firstLines.SkipLast(1).ToList();
 }
