@@ -21,7 +21,7 @@ public abstract class Diamond
             " B B "
         };
 
-        // reversedFirstLines.Reverse();
+        reversedFirstLines.Reverse();
 
         newLines.AddRange(reversedFirstLines);
         return newLines.ToArray();
