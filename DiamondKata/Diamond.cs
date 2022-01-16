@@ -5,9 +5,9 @@ public abstract class Diamond
     public static string Print(char suppliedLetter)
     {
         var reversedAlphabetCharacters = "CBA";
-        var alphabeticallyOrderedCharacters = "ABC";
 
-        var upperLeftCorner = alphabeticallyOrderedCharacters
+        var upperLeftCorner = reversedAlphabetCharacters
+            .Reverse()
             .Select(c => GenerateLeftCorner(reversedAlphabetCharacters, c))
             .ToList();
         return string.Join(
