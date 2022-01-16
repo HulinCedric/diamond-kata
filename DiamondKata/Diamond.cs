@@ -3,15 +3,21 @@
 public abstract class Diamond
 {
     public static string Print(char suppliedLetter)
-        => string.Join(
+    {
+        var upperLeftCorner = new List<string>
+        {
+            "  A",
+            " B ",
+            GenerateLeftCorner("C  ")
+        };
+        return string.Join(
             "\n",
-            Mirror(
-                new List<string>
-                {
-                    "  A",
-                    " B ",
-                    "C  "
-                }).Select(MirrorLine));
+            Mirror(upperLeftCorner)
+                .Select(MirrorLine));
+    }
+
+    private static string GenerateLeftCorner(string character)
+        => "C  ";
 
     private static string MirrorLine(string line)
     {
