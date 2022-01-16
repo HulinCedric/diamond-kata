@@ -8,10 +8,17 @@ public abstract class Diamond
             Mirror(
                 "  A  ",
                 " B B ",
-                "C   C",
-                " B B ",
-                "  A  "));
+                "C   C"));
 
-    private static string[] Mirror(params string[] strings)
-        => strings;
+    private static string[] Mirror(params string[] lines)
+    {
+        var newLines = new List<string>(lines);
+        newLines.AddRange(
+            new[]
+            {
+                " B B ",
+                "  A  "
+            });
+        return newLines.ToArray();
+    }
 }
