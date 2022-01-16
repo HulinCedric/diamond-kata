@@ -17,7 +17,7 @@ public abstract class Diamond
     }
 
     private static string GetReversedAlphabetCharactersFrom(char character)
-        => "CBA";
+        => character + "BA";
 
     private static string GenerateLeftCorner(string letters, char character)
     {
