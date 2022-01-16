@@ -18,7 +18,13 @@ public abstract class Diamond
     }
 
     private static string GenerateLeftCorner(string letters, char character)
-        => character + "  ";
+    {
+        var orderedCharacters = letters.ToCharArray();
+
+        var replacedWithSeparatorExceptCharacter = character;
+
+        return string.Join("", replacedWithSeparatorExceptCharacter) + "  ";
+    }
 
     private static string MirrorLine(string line)
     {
