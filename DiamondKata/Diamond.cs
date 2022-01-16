@@ -20,13 +20,9 @@ public abstract class Diamond
     {
         var endLetter = letter;
 
-        var reversedAlphabet = new List<char> { endLetter };
-
-        var lettersToA = new List<char>();
-        for (var current = (char)(endLetter - 1); current >= 'A'; current--)
-            lettersToA.Add(current);
-
-        reversedAlphabet.AddRange(lettersToA);
+        var reversedAlphabet = new List<char>();
+        for (var current = endLetter; current >= 'A'; current--)
+            reversedAlphabet.Add(current);
 
         return string.Join("", reversedAlphabet);
     }
