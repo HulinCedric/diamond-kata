@@ -17,10 +17,11 @@ public abstract class Diamond
 
         var reversedFirstLines = new List<string>
         {
-            " B B ",
-            "  A  "
+            "  A  ",
+            " B B "
         };
 
+        // reversedFirstLines.Reverse();
 
         newLines.AddRange(reversedFirstLines);
         return newLines.ToArray();
