@@ -4,11 +4,12 @@ public abstract class Diamond
 {
     public static string Print(char suppliedLetter)
     {
+        var reversedAlphabetCharacters = "CBA";
         var upperLeftCorner = new List<string>
         {
             "  A",
             " B ",
-            GenerateLeftCorner('C')
+            GenerateLeftCorner(reversedAlphabetCharacters, 'C')
         };
         return string.Join(
             "\n",
@@ -16,7 +17,7 @@ public abstract class Diamond
                 .Select(MirrorLine));
     }
 
-    private static string GenerateLeftCorner(char character)
+    private static string GenerateLeftCorner(string letters, char character)
         => character + "  ";
 
     private static string MirrorLine(string line)
