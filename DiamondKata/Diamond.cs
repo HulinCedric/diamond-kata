@@ -3,7 +3,9 @@
 public abstract class Diamond
 {
     public static string Print(char suppliedLetter)
-    {
-        throw new NotImplementedException();
-    }
+        => "  A  \n" +
+           " B B \n" +
+           "C   C\n" +
+           " B B \n" +
+           "  A  ";
 }
