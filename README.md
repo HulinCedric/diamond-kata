@@ -79,10 +79,25 @@ There are a lot of other possible paths (maybe illustrate here later):
 - [Ron Jeffries approach](https://ronjeffries.com/articles/tdd-diamond)
 - And many more... search "diamond kata" on the web ;)
 
+#### Outside-in
+
+Outside-in approach drive development by starting with an acceptance test who expect from diamond, the final requirement.
+
+The acceptance test guide developers to prevent losing focus of the final goal.
+
+It is a little harder to find the path to the solution, because we are starting with the whole problem. By using, preparatory refactoring and TDD techniques, the solution can incrementally be driven by the acceptance test.
+
+There are three techniques for quickly getting to green:
+
+- Fake It: Return a constant and gradually replace constants with variables until you have real code.
+- Obvious Implementation: Type in the real implementation.
+- Triangulation: Only generalize code when we have two examples or more.
+
+In outside-in TDD, the acceptance test represents the outer loop. It is possible to create new unit test files for the inner loop, so to test classes behaviors that emerge during the implementation and refactoring of the outer loop requirement.
+
 ### Property-Driven Development
 
-In contrast to example-driven approach, property-driven idea is to validate an expected property of a system. It's a
-paint of the system behavior contour.
+In contrast to example-driven approach, property-driven idea is to validate an expected property of a system. It's a paint of the system behavior contour.
 
 Examples aren't necessary, a range of input will assert the property validity.
 
