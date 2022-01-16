@@ -4,7 +4,7 @@ public abstract class Diamond
 {
     public static string Print(char suppliedLetter)
     {
-        var reversedAlphabetCharacters = GetReversedAlphabetCharactersFrom('C');
+        var reversedAlphabetCharacters = GetReversedAlphabetFrom('C');
 
         var upperLeftCorner = reversedAlphabetCharacters
             .Reverse()
@@ -16,8 +16,18 @@ public abstract class Diamond
                 .Select(MirrorLine));
     }
 
-    private static string GetReversedAlphabetCharactersFrom(char character)
-        => character + "BA";
+    private static string GetReversedAlphabetFrom(char letter)
+    {
+        var endLetter = letter;
+
+        var reversedAlphabet = new List<char> { endLetter };
+
+        var lettersToA = new List<char> { 'B', 'A' };
+        
+        reversedAlphabet.AddRange(lettersToA);
+
+        return string.Join("", reversedAlphabet);
+    }
 
     private static string GenerateLeftCorner(string letters, char character)
     {
