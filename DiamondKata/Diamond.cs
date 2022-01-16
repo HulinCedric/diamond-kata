@@ -17,8 +17,7 @@ public abstract class Diamond
     {
         var characters = line.ToCharArray().Select(c => c.ToString()).ToList();
 
-        var mirrorCharacters = characters;
-        // var mirrorCharacters = Mirror(characters);
+        var mirrorCharacters = Mirror(characters);
 
         var mirrorLine = string.Join("", mirrorCharacters);
 
