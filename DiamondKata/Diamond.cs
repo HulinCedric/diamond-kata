@@ -22,8 +22,10 @@ public abstract class Diamond
 
         var reversedAlphabet = new List<char> { endLetter };
 
-        var lettersToA = new List<char> { 'B', 'A' };
-        
+        var lettersToA = new List<char>();
+        for (var current = (char)(endLetter - 1); current >= 'A'; current--)
+            lettersToA.Add(current);
+
         reversedAlphabet.AddRange(lettersToA);
 
         return string.Join("", reversedAlphabet);
