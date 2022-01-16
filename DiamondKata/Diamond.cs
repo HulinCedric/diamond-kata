@@ -6,12 +6,12 @@ public abstract class Diamond
         => string.Join(
             "\n",
             Mirror(
-                MirrorLine("  A  "),
+                MirrorLine("  A"),
                 " B B ",
                 "C   C"));
 
     private static string MirrorLine(string line)
-        => line;
+        => line + "  ";
 
     private static string[] Mirror(params string[] lines)
     {
