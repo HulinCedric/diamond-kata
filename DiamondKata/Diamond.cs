@@ -8,10 +8,10 @@ public abstract class Diamond
             Mirror(
                 new List<string>
                 {
-                    MirrorLine("  A"),
-                    MirrorLine(" B "),
-                    MirrorLine("C  ")
-                }));
+                    "  A",
+                    " B ",
+                    "C  "
+                }).Select(MirrorLine));
 
     private static string MirrorLine(string line)
     {
