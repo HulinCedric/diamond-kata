@@ -12,13 +12,17 @@ public abstract class Diamond
 
     private static string[] Mirror(params string[] lines)
     {
-        var newLines = new List<string>(lines);
-        newLines.AddRange(
-            new[]
-            {
-                " B B ",
-                "  A  "
-            });
+        var firstLines = lines;
+        var newLines = new List<string>(firstLines);
+
+        var reversedFirstLines = new List<string>
+        {
+            " B B ",
+            "  A  "
+        };
+
+
+        newLines.AddRange(reversedFirstLines);
         return newLines.ToArray();
     }
 }
