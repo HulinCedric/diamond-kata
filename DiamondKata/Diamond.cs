@@ -7,8 +7,8 @@ public abstract class Diamond
         var reversedAlphabetCharacters = "CBA";
         var upperLeftCorner = new List<string>
         {
-            "  A",
-            " B ",
+            GenerateLeftCorner(reversedAlphabetCharacters, 'A'),
+            GenerateLeftCorner(reversedAlphabetCharacters, 'B'),
             GenerateLeftCorner(reversedAlphabetCharacters, 'C')
         };
         return string.Join(
