@@ -4,11 +4,11 @@ public abstract class Diamond
 {
     public static string Print(char suppliedLetter)
     {
-        var reversedAlphabetCharacters = GetReversedAlphabetFrom('C');
+        var reversedAlphabetLetters = GetReversedAlphabetFrom('C');
 
-        var upperLeftCorner = reversedAlphabetCharacters
+        var upperLeftCorner = reversedAlphabetLetters
             .Reverse()
-            .Select(c => GenerateLeftCorner(reversedAlphabetCharacters, c))
+            .Select(c => GenerateLeftCorner(reversedAlphabetLetters, c))
             .ToList();
         return string.Join(
             "\n",
@@ -20,11 +20,15 @@ public abstract class Diamond
     {
         var endLetter = letter;
 
-        var reversedAlphabet = new List<char>();
-        for (var current = endLetter; current >= 'A'; current--)
-            reversedAlphabet.Add(current);
+        var reversedAlphabet = GetReversedAlphabetCharactersFrom(endLetter);
 
         return string.Join("", reversedAlphabet);
+    }
+
+    private static IEnumerable<char> GetReversedAlphabetCharactersFrom(char endLetter)
+    {
+        for (var current = endLetter; current >= 'A'; current--)
+            yield return current;
     }
 
     private static string GenerateLeftCorner(string letters, char character)
